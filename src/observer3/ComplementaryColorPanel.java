@@ -1,11 +1,11 @@
-package observer2;
+package observer3;
 
 import java.awt.Color;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
-public class ComplementaryColorPanel extends ColorPanel implements ChangeListener {
+public class ComplementaryColorPanel extends ColorPanel implements PropertyChangeListener {
 
 	public ComplementaryColorPanel(Color initialColor) {
 		super(initialColor);
@@ -13,7 +13,7 @@ public class ComplementaryColorPanel extends ColorPanel implements ChangeListene
 	}
 
 	@Override
-	public void stateChanged(ChangeEvent e) {
+	public void propertyChange(PropertyChangeEvent evt) {
 		if(DisplayColors.hueSlider != null && DisplayColors.saturationSlider != null && DisplayColors.brightnessSlider != null){
 		    float newHue = (float)DisplayColors.hueSlider.getValue()/100;
 		    float newSaturation = (float)DisplayColors.saturationSlider.getValue()/100;

@@ -1,7 +1,6 @@
-package observer2;
+package observer3;
 
 import javax.swing.*;
-import javax.swing.event.*;
 import java.awt.GridLayout;
 import java.awt.Dimension;
 import java.awt.Color;
@@ -32,6 +31,8 @@ public class DisplayColors{
 	complementaryColorPanel = new ComplementaryColorPanel(Color.getHSBColor((float).5, (float).5, (float).5));
 	complementaryColorPanel.setPreferredSize(new Dimension(300, 200));
 	p.add(SwingFacade.createTitledPanel("Complementary Color", complementaryColorPanel));
+	// complementary now listens to original panel
+	originalColorPanel.addPropertyChangeListener(complementaryColorPanel);
 	return p;
     }
 
@@ -58,7 +59,6 @@ public class DisplayColors{
 	JSlider slider = new JSlider();
 	// You need to make it possible for the app to get the slider values out.
 	slider.addChangeListener(originalColorPanel);
-	slider.addChangeListener(complementaryColorPanel);
 	slider.setValue(slider.getMinimum());
 	return slider;
     }

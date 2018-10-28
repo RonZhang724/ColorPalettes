@@ -18,8 +18,7 @@ public class OriginalColorPanel extends ColorPanel implements ChangeListener {
 		    float newSaturation = (float)DisplayColors.saturationSlider.getValue()/100;
 		    float newBrightness = (float)DisplayColors.brightnessSlider.getValue()/100;
 		    Color newColor = Color.getHSBColor(newHue, newSaturation, newBrightness);
-		    // WHAT GOES HERE?
-		    // You need to update the two color panels with the appropriate colors
+		    // update original color panel when changes happens 
 		    setColor(newColor);
 		}
     }
