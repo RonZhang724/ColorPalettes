@@ -57,7 +57,7 @@ public class DisplayColors{
 
     private JSlider slider(){
 	JSlider slider = new JSlider();
-	// You need to make it possible for the app to get the slider values out.
+	// original color panel listens to slider change 
 	slider.addChangeListener(originalColorPanel);
 	slider.setValue(slider.getMinimum());
 	return slider;

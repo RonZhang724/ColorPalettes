@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-
 public class ComplementaryColorPanel extends ColorPanel implements PropertyChangeListener {
 
 	public ComplementaryColorPanel(Color initialColor) {

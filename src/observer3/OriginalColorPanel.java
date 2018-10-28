@@ -21,5 +21,4 @@ public class OriginalColorPanel extends ColorPanel implements ChangeListener {
 		    setColor(newColor);
 		}
     }
-
 }
